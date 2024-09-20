@@ -1,14 +1,20 @@
 # Databricks notebook source
-
 import json
 
-sat_variables = {
+# COMMAND ----------
+
+sat_vars = {
     "verbosity": "info",
-    "account_id": "",
     "warehouse_id": "",
-    "catalog_name": "",
-    "schema_name": "",
+    "catalog_name": "new_sat_david",
+    "schema_name": "sat",
     "proxies": {},
     "client_id": "",
     "client_secret": "",
 }
+sat_vars["database"] = f"{sat_vars['catalog_name']}.{sat_vars['schema_name']}"
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC
